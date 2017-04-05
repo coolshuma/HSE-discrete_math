@@ -1,0 +1,23 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Изменим формат \section и \subsection:
+\usepackage{titlesec}
+\titleformat{\section}
+{\vspace{1cm}\centering\LARGE\bfseries}	% Стиль заголовка
+{}										% префикс
+{0pt}									% Расстояние между префиксом и заголовком
+{} 										% Как отображается префикс
+\titleformat{\subsection}				% Аналогично для \subsection
+{\Large\bfseries}
+{}
+{0pt}
+{}
+
+%% Отступы между абзацами и в начале абзаца 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\medskipamount}

@@ -1,0 +1,142 @@
+\input{myheader.tex}
+\begin{document}
+	\section{Домашнее задание 1}
+	\subsection{Задача 1}
+	$$
+	1 \cdot (n - 1) + 2 \cdot (n -2) + \dots + (n - 1) \cdot 1 =  \frac{(n - 1)  \cdot  n \cdot (n + 1)}{6}.
+	$$
+	
+	{\bfРешение.}
+	
+	\textit{База}.
+	
+	$n = 1.$
+	
+	$ 1 \cdot 0 = \frac{(1 - 1)  \cdot  1 \cdot (1 + 1)}{6}. $
+	
+	$0 = 0$
+	
+	\textit{Шаг}.
+	
+	Мы можем представить левую часть уравнения как
+	 \[
+		\sum_{i = 1}^{n - 1} i \cdot (n - i)= \sum_{i = 1}^{n - 1}(i \cdot n - i^2) = \sum_{i = 1}^{n - 1} (i \cdot n) - \sum_{i = 1}^{n - 1} i^2.
+	\]
+	Также заметим, используя формулу суммы арифмитической прогрессии, чтo
+	\[
+		\sum_{i = 1}^{n - 1} (i \cdot n) = \left(\frac{1 + (n-1)}{2} \cdot (n - 1)\right) \cdot n = \frac{n^3 - n^2}{2}.
+	\]
+	
+	и 
+	
+	\[
+		\sum_{i = 1}^{n} (i \cdot (n + 1)) = \sum_{i = 1}^{n} (i \cdot n) + \sum_{i = 1}^{n} (i) = \frac{n^3 + n^2}{2} + \frac{n^2 + n}{2} = \frac{n^3 + 2n^2 + n}{2}.
+	\]
+	Тогда докажем, что 
+	\[     
+		\left(\sum_{i = 1}^{n} (i \cdot n) - \sum_{i = 1}^{n} i^2\right) - \left(\sum_{i = 1}^{n - 1} (i \cdot n) - \sum_{i = 1}^{n - 1} i^2\right) = \frac{n \cdot  (n + 1) \cdot (n + 2)}{6} - \frac{(n - 1)  \cdot  n \cdot (n + 1)}{6}.
+	\]
+	\[     
+		\frac{n^3 + 2n^2 + n}{2} - \frac{n^3 - n^2}{2} - n^2 = \frac{(n^3 + 2n^2 + n^2 + 2n) - (n^3 + n^2 - n^2 - n)}{6}.
+	\]
+	\[     
+		\frac{3n^2 + n}{2} - n^2 = \frac{3n^2 + 3n}{6}.
+	\]
+	\[     
+		\frac{n^2 + n}{2} = \frac{n^2 + n}{2}.
+	\]
+	\\*
+	
+	\subsection{Задача 2}
+	\[
+		\cos(x) + \cos(2x) + \dots + \cos(nx) = \frac{\sin(n+\frac{1}{2})x}{2sin\frac{x}{2}} - \frac{1}{2}.
+	\]
+	
+	\textit{База}.
+	
+	$ n = 1$
+	\[
+		\cos(x) = \frac{\sin\frac{3}{2}x}{2sin\frac{x}{2}} - \frac{1}{2}.
+	\]
+	\[
+		\cos(x) = \frac{\sin\frac{3}{2}x}{2sin\frac{x}{2}} - \frac{\sin\frac{1}{2}x}{2sin\frac{x}{2}}.
+	\]
+	\[
+		\cos(x) = \frac{2\sin\frac{x}{2} \cdot \cos(x)} {2\sin\frac{x}{2}}.
+	\]
+	\[
+		\cos(x) = \cos(x).
+	\]
+	
+	\textit{Шаг}.
+	Докажем, что
+	\[
+		\cos(x) + \cos(2x) + \dots + \cos(nx) + \cos x(n+1) = \frac{\sin(n+1+\frac{1}{2})x}{2sin\frac{x}{2}} - \frac{1}{2}.
+	\]
+	\[
+		\frac{\sin(n+1+\frac{1}{2})x}{2sin\frac{x}{2}} - \frac{1}{2} = \frac{\sin(n+\frac{1}{2})x}{2sin\frac{x}{2}} - \frac{1}{2} + cos x(n + 1).
+	\]
+	\[
+		\frac{\sin(n+1+\frac{1}{2})x}{2sin\frac{x}{2}} - \frac{1}{2} = \frac{\sin(n+\frac{1}{2})x - \sin \frac{x}{2} + 2\sin \frac{x}{2}\cos x(n+1)}{2\sin \frac{x}{2}}.
+	\]
+	\[
+		\frac{\sin(n+1+\frac{1}{2})x}{2sin\frac{x}{2}} - \frac{1}{2} = \frac{\sin(n+\frac{1}{2})x - \sin \frac{x}{2} + \sin(\frac{x}{2} + nx + x) + \sin(\frac{x}{2} - nx - x)}{2\sin \frac{x}{2}}.
+	\]
+	\[
+		\frac{\sin(\frac{x}{2} + nx + x) - \sin \frac{x}{2}}{2sin\frac{x}{2}} = \frac{\sin(n+\frac{1}{2})x - \sin \frac{x}{2} + \sin(\frac{x}{2} + nx + x) + \sin(\frac{x}{2} - nx - x)}{2\sin \frac{x}{2}}.
+	\]
+	\[
+		\frac{\sin(n+\frac{1}{2})x + \sin(\frac{x}{2} - nx - x)}{2\sin \frac{x}{2}} = 0.
+	\]
+	\[
+		\frac{\sin(n+\frac{1}{2})x - \sin(n+\frac{1}{2})x}{2\sin \frac{x}{2}} = 0.
+	\]
+	\[
+		\frac{0}{2\sin \frac{x}{2}} = 0.
+	\]
+	\[
+		0 = 0.
+	\]
+	
+\subsection{Задача 4}
+	\[
+		\frac{1}{n + 1} + \frac{1}{n + 2} + \dots + \frac{1}{2n} > 13/24,\  для\  всех\  n > 1.
+	\]
+
+	\textit{База}.
+	
+	$ n = 2$
+	\[
+		\frac{1}{3} + \frac{1}{4} = 14/24 > 13/24.
+	\]
+	\textit{Шаг}.
+	
+	Докажем, что послдеовательность будет возрастающей, а значит, что $f(n + 1) > f(n)$ и тогда из базы => $f(n) \ge 14/24$ при $n \ge 2$ и значит $f(n) > 13/24$ при $n > 1$.
+	
+	$\left(\frac{1}{n + 2} + \frac{1}{n + 3} + \dots + \frac{1}{2(n+1)}\right) - \left(\frac{1}{n + 1} + \frac{1}{n + 2} + \dots + \frac{1}{2n}\right) = \frac{1}{2n+1} + \frac{1}{2(n+1)} - \frac{1}{n+1} =$
+	
+	$\frac{2(n+1)+2n+1-2(2n+1)}{2(n+1)(2n+1)} = \frac{1}{2(n+1)(2n+1)} > 0$.
+	
+	Последовательность возрастающая, так как разность между ее текущим и предыдущим членом положительна.
+	
+	\subsection{Задача 7}
+	\[
+	\frac{1}{n + 1} + \frac{1}{n + 2} + \dots + \frac{1}{2n} > 13/24,\  для\  всех\  n > 1.
+	\]
+	
+	\textit{База}.
+
+	$ n = 1$.
+	
+	$ 4/2^1 = 2$.
+	
+	\textit{Шаг}.
+	
+	Заметим, что текущее число на шаге n будет делиться на $2^{n+1}$ либо нацело, либо с остатком равным единице. 
+	
+	Обозначим число на шаге n за t.
+	Будем просто приписывать слева 3 или 4. Тогда мы можем представить следующее число как $3*10^n + t = 3*(2^n*5^n) + t$ в случае, если мы приписали тройку и $4*10^n + t = 2^{n+2}*5^n + t$. 
+	Легко заметить, что $2^{n+2}*5^n$ делится на $2^{n+1}$ нацело, а $3*(2^n*5^n)$ с остатком один.
+	Тогда мы можем в случае, если t делится на $2^{n+1}$ нацело добавлять в начало числа четверку, а если же с остатком 1 -- тройку.
+	
+\end{document}
